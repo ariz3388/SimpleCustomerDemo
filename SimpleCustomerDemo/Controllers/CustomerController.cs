@@ -22,8 +22,7 @@ namespace SimpleCustomerDemo.Controllers
 
         [HttpGet]
         public string Get(int Id = 0)
-        {
-            
+        {            
             Logic.CustomerManager manager = new Logic.CustomerManager(new Database.CustomerDemoContext(config));
             Id = Math.Abs(Id);
 
@@ -32,7 +31,7 @@ namespace SimpleCustomerDemo.Controllers
         }
 
         [HttpPost]
-        public string Put(Database.Customer entity)
+        public string Post(Database.Customer entity)
         {            
             if (entity != null)
             {
