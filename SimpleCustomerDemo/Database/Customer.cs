@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 #nullable disable
 
@@ -15,10 +15,10 @@ namespace SimpleCustomerDemo.Database
         public string Address2 { get; set; }
         public string City { get; set; }
 
-        [XmlElement(ElementName = "State")]
+        [JsonProperty(PropertyName = "State")]
         public string StateCode { get; set; }
 
-        [XmlElement(ElementName = "PostalCode")]
+        [JsonProperty(PropertyName = "PostalCode")]
         public string ZipCode { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
